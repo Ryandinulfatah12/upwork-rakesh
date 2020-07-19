@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Website</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">  
+    <link rel="stylesheet" href="assets/vendors/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="app">
+        <div id="sidebar" class='active'>
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <img src="assets/images/logo600x120.png" alt="Your Logo">
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">         
+                        <li class='sidebar-title'>Main Menu</li>
+                        <li class="sidebar-item active ">
+                            <a href="index.html" class='sidebar-link'>
+                                <i data-feather="home" width="20"></i> 
+                                <span>Dashboard</span>
+                            </a>             
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="host-pages.html" class='sidebar-link'>
+                                <i data-feather="key" width="20"></i> 
+                                <span>Host</span>
+                            </a>             
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="check-in-pages.html" class='sidebar-link'>
+                                <i data-feather="edit" width="20"></i> 
+                                <span>Check-in Fields</span>
+                            </a>             
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="user-management-pages.html" class='sidebar-link'>
+                                <i data-feather="users" width="20"></i> 
+                                <span>User Managements</span>
+                            </a>             
+                        </li>
+                        <li class="sidebar-item ">
+                            <a href="export-pages.html" class='sidebar-link'>
+                                <i data-feather="database" width="20"></i> 
+                                <span>Reports</span>
+                            </a>             
+                        </li>
+                        <hr>
+                        <li class="sidebar-item ">
+                            <a href="#" class='sidebar-link'>
+                                <i data-feather="settings" width="20"></i> 
+                                <span>Settings</span>
+                            </a>             
+                        </li>
+                        <li class="sidebar-item ">
+                            <a href="#" onclick="question()" class='sidebar-link'>
+                                <i data-feather="log-out" width="20"></i> 
+                                <span>Log out</span>
+                            </a>             
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <nav class="navbar navbar-header navbar-expand navbar-light">
+                <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
+                <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <div class="avatar mr-1">
+                                <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
+                            </div>
+                            <div class="d-none d-md-block d-lg-inline-block">Hi, Anna Hatway</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button onclick="question()" class="dropdown-item"><i data-feather="log-out"></i> Logout</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="main-content container-fluid">
+            <div class="page-title">
+                <h3>Dashboard</h3>
+                <p class="text-subtitle text-muted">A good dashboard to display your statistics</p>
+            </div>
+            <section class="section">
+                <div class="row mb-2">
+                    <div class="col-md-7 align-items-center">
+                        <div class="card p-4">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="media">
+                                        <div class="media-body">
+                                          <h2 class="fw-bold">
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people" fill="#3d6198" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                                            </svg> 15
+                                        </h2>
+                                        <h6>Total Visitors</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="media-body">
+                                    <h2 class="fw-bold">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-open" fill="#ef4b4c" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z"/>
+                                            <path fill-rule="evenodd" d="M10.828.122A.5.5 0 0 1 11 .5V15h-1V1.077l-6 .857V15H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117z"/>
+                                            <path d="M8 9c0 .552.224 1 .5 1s.5-.448.5-1-.224-1-.5-1-.5.448-.5 1z"/>
+                                        </svg>  15
+                                    </h2>
+                                    <h6>Total Visitors</h6>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="media-body">
+                                    <h2 class="fw-bold">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-open" fill="#3be8b0" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z"/>
+                                            <path fill-rule="evenodd" d="M10.828.122A.5.5 0 0 1 11 .5V15h-1V1.077l-6 .857V15H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117z"/>
+                                            <path d="M8 9c0 .552.224 1 .5 1s.5-.448.5-1-.224-1-.5-1-.5.448-.5 1z"/>
+                                        </svg>  15
+                                    </h2>
+                                    <h6>Checked out</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn icon icon-left btn-primary btn-block" style="height: 70px;" data-toggle="modal" data-target="#exampleModal">
+                                <h3 class="fw-bold text-white">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
+                                        <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
+                                    </svg> Add Hosts
+                                </h3>
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <a href="check-in-pages.html" class="btn icon icon-left btn-primary btn-block" style="height: 70px;">
+                                <h3 class="fw-bold text-white">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
+                                        <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
+                                    </svg> Add Check-in Fields
+                                </h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header d-flex">
+                            <h3 class="mr-5">Visits</h3>
+                            <select class="form-select round mr-3 ml-5" id="basicSelect">
+                                <option selected disabled>Show</option>
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                            </select>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="myChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <div class="d-flex">
+                                <input type="text" class="form-control round mr-3" placeholder="Search">
+                                <select class="form-select round mr-3" id="basicSelect">
+                                    <option selected disabled>To Meet</option>
+                                    <option>Official</option>
+                                    <option>Interview</option>
+                                    <option>MS - Srinivasulu</option>
+                                    <option>CEO - Syed</option>
+                                </select>
+                                <select class="form-select round" id="basicSelect">
+                                    <option selected disabled>To Meet</option>
+                                    <option>Official</option>
+                                    <option>Interview</option>
+                                    <option>MS - Srinivasulu</option>
+                                    <option>CEO - Syed</option>
+                                </select>
+                            </div>    
+                            <div class="d-flex ">
+                                <button class="btn btn-outline-primary round" data-toggle="modal" data-target="#print"><i data-feather="printer" width="20"></i> Print</button>
+                                <button class="btn btn-outline-primary round ml-2" data-toggle="modal" data-target="#export"><i data-feather="download" width="20"></i>  Export</button>
+                            </div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                            <div class="table-responsive">
+                                <table class='table mb-0' id="table1">
+                                    <thead>
+                                        <tr>
+                                            <th>Visitor Name</th>
+                                            <th>Company</th>
+                                            <th>To Meet</th>
+                                            <th>Mobile</th>
+                                            <th>In Time</th>
+                                            <th>Out Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
+                                            <td>vehicula.aliquet@semconsequat.co.uk</td>
+                                            <td>076 4820 8838</td>
+                                            <td>Offenburg</td>
+                                            <td>12-21-2020</td>
+                                            <td>092-232</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/images/avatar/avatar-s-2.png" width="36px" class="round"> Graiden</td>
+                                            <td>vehicula.aliquet@semconsequat.co.uk</td>
+                                            <td>076 4820 8838</td>
+                                            <td>Offenburg</td>
+                                            <td>12-21-2020</td>
+                                            <td>092-232</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/images/avatar/avatar-s-3.png" width="36px" class="round"> Graiden</td>
+                                            <td>vehicula.aliquet@semconsequat.co.uk</td>
+                                            <td>076 4820 8838</td>
+                                            <td>Offenburg</td>
+                                            <td>12-21-2020</td>
+                                            <td>092-232</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+</div>
+</div>
+
+<!-- Popup Modal -->
+
+<!-- Add New Host -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Host</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body d-inline">
+                <form action="">
+                    <input type="text" class="form-control round mb-3" placeholder="Type host name">
+                    <input type="text" class="form-control round" placeholder="Add Photo">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" id="btn" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Export -->
+<div class="modal fade" id="export" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Export Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group d-flex">
+                        <input type="date" class="form-control round" placeholder="Type host name">
+                        <input type="date" class="form-control round" placeholder="Add Photo">
+                    </div>
+                    <select class="form-select">
+                        <option selected>All Visitor</option>
+                        <option>Official</option>
+                        <option>Interview</option>
+                        <option>MS - Srinivasulu</option>
+                        <option>CEO - Syed</option>
+                    </select>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="btn" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Print -->
+<div class="modal fade" id="print" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Print Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group d-flex">
+                        <input type="date" class="form-control round" placeholder="Type host name">
+                        <input type="date" class="form-control round" placeholder="Add Photo">
+                    </div>
+                    <select class="form-select">
+                        <option selected>All Visitor</option>
+                        <option>Official</option>
+                        <option>Interview</option>
+                        <option>MS - Srinivasulu</option>
+                        <option>CEO - Syed</option>
+                    </select>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="btn" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Popup -->
+
+<!-- Third Party Javascript Library -->
+<script src="assets/js/feather-icons/feather.min.js"></script>
+<script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/vendors/chartjs/Chart.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/sweetalert.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+// Sweet Alert JS
+const btn =  document.getElementById('btn');
+btn.addEventListener("click", function() {
+    swal({
+        title: "Good job!",
+        text: "Host “ Environment Day 2020 guests “ successfully added!",
+        icon: "success",
+        button: "Got it",
+    });
+})
+
+
+// ChartJS
+var ctx = document.getElementById('myChart').getContext("2d");
+var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+gradientStroke.addColorStop(0, '#3775ea');
+gradientStroke.addColorStop(1, '#3775ea');
+
+var gradientFill = ctx.createLinearGradient(0, 0, 0, 100);
+gradientFill.addColorStop(0, "rgba(55, 117, 234, 1)");
+gradientFill.addColorStop(1, "rgba(57, 119, 234, 0.14)");
+
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["Juli 11", "Juli 12", "Juli 13", "Juli 14", "Juli 15", "Juli 16", "Juli 17"],
+        datasets: [{
+            label: "Data",
+            borderColor: gradientStroke,
+            pointBackgroundColor: gradientStroke,
+            pointHoverBackgroundColor: gradientStroke,
+            pointHoverBorderColor: gradientStroke,
+            backgroundColor: gradientFill,
+            data: [100, 70, 150, 200, 70, 70, 160]
+        }]
+    },
+    options: {
+        legend: {
+            position: "bottom"
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    fontColor: "rgba(0,0,0,0.5)",
+                    fontStyle: "bold",
+                    beginAtZero: true,
+                    maxTicksLimit: 5,
+                    padding: 20
+                },
+                gridLines: {
+                    drawTicks: false,
+                    display: false
+                }
+
+            }],
+            xAxes: [{
+                gridLines: {
+                    zeroLineColor: "transparent"
+                },
+                ticks: {
+                    padding: 20,
+                    fontColor: "rgba(0,0,0,0.5)",
+                    fontStyle: "bold"
+                }
+            }]
+        }
+    }
+});
+</script>
+</body>
+</html>

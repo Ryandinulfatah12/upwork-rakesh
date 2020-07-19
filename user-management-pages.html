@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Website</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">  
+    <link rel="stylesheet" href="assets/vendors/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="app">
+        <div id="sidebar" class='active'>
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <img src="assets/images/logo600x120.png" alt="Your Logo">
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">         
+                        <li class='sidebar-title'>Main Menu</li>
+                        <li class="sidebar-item ">
+                            <a href="index.html" class='sidebar-link'>
+                                <i data-feather="home" width="20"></i> 
+                                <span>Dashboard</span>
+                            </a>             
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="host-pages.html" class='sidebar-link'>
+                                <i data-feather="key" width="20"></i> 
+                                <span>Host</span>
+                            </a>             
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="check-in-pages.html" class='sidebar-link'>
+                                <i data-feather="edit" width="20"></i> 
+                                <span>Check-in Fields</span>
+                            </a>             
+                        </li>
+                        <li class="sidebar-item active">
+                            <a href="user-management-pages.html" class='sidebar-link'>
+                                <i data-feather="users" width="20"></i> 
+                                <span>User Managements</span>
+                            </a>             
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="export-pages.html" class='sidebar-link'>
+                                <i data-feather="database" width="20"></i>
+                                <span>Export</span>
+                            </a>             
+                        </li>
+                        <hr>
+                        <li class="sidebar-item ">
+                            <a href="#" class='sidebar-link'>
+                                <i data-feather="settings" width="20"></i> 
+                                <span>Settings</span>
+                            </a>             
+                        </li>
+                        <li class="sidebar-item ">
+                            <a href="#" onclick="question()" class='sidebar-link'>
+                                <i data-feather="log-out" width="20"></i> 
+                                <span>Log out</span>
+                            </a>             
+                        </li>
+                        
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <nav class="navbar navbar-header navbar-expand navbar-light">
+                <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
+                <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <div class="avatar mr-1">
+                                <img src="assets/images/avatar/avatar-s-1.png" alt="" srcset="">
+                            </div>
+                            <div class="d-none d-md-block d-lg-inline-block">Hi, Anna Hatway</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#" onclick="question()"><i data-feather="log-out"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="main-content container-fluid">
+            <div class="page-title">
+                <h3>User Managements Fields</h3>
+                <p class="text-subtitle text-muted">A good dashboard to display your statistics</p>
+            </div>
+            <section class="section">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>User Managements</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="d-flex">
+                                    <input type="text" class="form-control round mr-3" placeholder="Name" value="admin">
+                                    <input type="text" class="form-control round mr-3" placeholder="Password" value="pwd123">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="d-flex">
+                                    <input type="text" class="form-control round mr-3" placeholder="Name" value="raghu">
+                                    <input type="text" class="form-control round mr-3" placeholder="Password" value="raghu123">
+                                    <select class="form-select round" id="basicSelect">
+                                        <option selected>View Only</option>
+                                        <option>Official</option>
+                                        <option>Interview</option>
+                                        <option>MS - Srinivasulu</option>
+                                        <option>CEO - Syed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="d-flex">
+                                    <input type="text" class="form-control round mr-3" placeholder="Name" value="raghu">
+                                    <input type="text" class="form-control round mr-3" placeholder="Password" value="raghu123">
+                                    <select class="form-select round" id="basicSelect">
+                                        <option selected>Edit</option>
+                                        <option>Official</option>
+                                        <option>Interview</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="d-flex">
+                                    <input type="text" class="form-control round mr-3" placeholder="Name" value="raghu">
+                                    <input type="text" class="form-control round mr-3" placeholder="Password" value="raghu123">
+                                    <select class="form-select round" id="basicSelect">
+                                        <option selected>View Only</option>
+                                        <option>Official</option>
+                                        <option>Interview</option>
+                                        <option>MS - Srinivasulu</option>
+                                        <option>CEO - Syed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" onclick="success()" class="btn btn-primary float-right btn-lg">Save</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <button class="btn icon icon-left" style="height: 50px;">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
+                            <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
+                        </svg>  Add New User
+                    </button>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/feather-icons/feather.min.js"></script>
+<script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/sweetalert.min.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>
