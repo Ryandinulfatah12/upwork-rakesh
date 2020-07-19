@@ -109,18 +109,18 @@
                     <div class="card-body">
                         <div class="form-group d-flex">
                             <div class="row">
-                                <div class="col-5">
+                                <div class="col-md-5 mb-3">
                                     <div class="mr-2">
                                         <input type="text" class="form-control round" placeholder="type host name here">
                                     </div>
                                 </div>
-                                <div class="col-5">
+                                <div class="col-md-5 mb-3">
                                     <div class="mr-2">
                                         <input type="text" class="form-control round" placeholder="photos">
                                     </div>
                                 </div>
-                                <div class="col-2">
-                                    <button type="button" onclick="success()" class="btn btn-primary">Add</button>
+                                <div class="col-md-2 mb-3">
+                                    <button type="button" onclick="success()" class="btn btn-primary round">Add</button>
                                 </div>
                             </div>
                             
@@ -131,69 +131,71 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <div class="d-flex">
-                                <input type="text" class="form-control round mr-3" placeholder="Search">
-                        </select>
-                    </div>    
-                    <div class="d-flex ">
-                        <button class="btn btn-outline-primary round" data-toggle="modal" data-target="#print"><i data-feather="printer" width="20"></i> Print</button>
-                        <button class="btn btn-outline-primary round ml-2" data-toggle="modal" data-target="#export"><i data-feather="download" width="20"></i>  Export</button>
+                            <div class="row">
+                                <div class="col-md-9 mb-3">
+                                    <input type="text" class="form-control round mr-3" placeholder="Search">
+                                </div>
+                                
+                                <div class="col-md-3 mb-3 d-flex">
+                                    <button class="btn btn-outline-primary round" data-toggle="modal" data-target="#print"><i data-feather="printer" width="20"></i> Print</button>
+                                    <button class="btn btn-outline-primary round" data-toggle="modal" data-target="#export"><i data-feather="download" width="20"></i>  Export</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                            <div class="table-responsive">
+                                <table class='table mb-0' id="table1">
+                                    <thead>
+                                        <tr>
+                                            <th>Visitor Name</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
+                                            <td>
+                                                <button class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button>
+                                                <button class="btn btn-danger" type="button" onclick="deleteQuestion()">Delete</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
+                                            <td>
+                                                <button class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button>
+                                                <button class="btn btn-danger" type="button" onclick="deleteQuestion()">Delete</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
+                                            <td>
+                                                <button class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button>
+                                                <button class="btn btn-danger" type="button" onclick="deleteQuestion()">Delete</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
+                                            <td>
+                                                <button class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button>
+                                                <button class="btn btn-danger" type="button" onclick="deleteQuestion()">Delete</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
+                                            <td>
+                                                <button class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button>
+                                                <button class="btn btn-danger" type="button" onclick="deleteQuestion()">Delete</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card-body px-0 pb-0">
-                    <div class="table-responsive">
-                        <table class='table mb-0' id="table1">
-                            <thead>
-                                <tr>
-                                    <th>Visitor Name</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
-                                    <td>
-                                        <button class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button>
-                                        <button class="btn btn-danger" type="button" onclick="deleteQuestion()">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
-                                    <td>
-                                        <button class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button>
-                                        <button class="btn btn-danger" type="button" onclick="deleteQuestion()">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
-                                    <td>
-                                        <button class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button>
-                                        <button class="btn btn-danger" type="button" onclick="deleteQuestion()">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
-                                    <td>
-                                        <button class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button>
-                                        <button class="btn btn-danger" type="button" onclick="deleteQuestion()">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="assets/images/avatar/avatar-s-1.png" width="36px" class="round"> Graiden</td>
-                                    <td>
-                                        <button class="btn btn-info" data-toggle="modal" data-target="#edit">Edit</button>
-                                        <button class="btn btn-danger" type="button" onclick="deleteQuestion()">Delete</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
-</div>
-</div>
+    </div>
 </div>
 
 <!-- Popup Export -->
