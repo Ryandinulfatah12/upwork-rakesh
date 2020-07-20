@@ -31,7 +31,7 @@
  * 6. Responsive
  */
 .color-primary {
-  color: #5A8DEE;
+  color: #0072a9;
 }
 
 .color-secondary {
@@ -2996,7 +2996,7 @@ progress {
 
 .btn-primary {
   color: #fff;
-  background-color: #5A8DEE;
+  background-color: #0072a9;
   border-color: #5A8DEE;
 }
 .btn-primary:hover {
@@ -3266,12 +3266,12 @@ progress {
 
 .btn-outline-primary {
   color: #5A8DEE;
-  border-color: #5A8DEE;
+  border-color: #0072a9;
 }
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #5A8DEE;
-  border-color: #5A8DEE;
+  background-color: #0072a9;
+  border-color: #0072a9;
 }
 .btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(90, 141, 238, 0.5);

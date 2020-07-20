@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap);/**
+/**
  * Voler
  *
  * Voler is a clean & modern HTML5 admin template based on Bootstrap 5
@@ -70,7 +70,7 @@
  * 6. Responsive
  */
 .color-primary {
-  color: #5A8DEE;
+  color: #0072a9;
 }
 
 .color-secondary {
@@ -106,7 +106,11 @@
 }
 
 * {
-  font-family: "Raleway";
+  font-family: "Segoe UI", sans-serif, arial;
+}
+
+.plus {
+  background-image: url(assets/images/plus.svg);
 }
 
 #app {

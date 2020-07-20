@@ -11,41 +11,46 @@
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
 
-<body style="overflow: hidden;">
+<body style="overflow: hidden; margin-top: 30px;">
     
     <div class="container">
         <div class="row mx-auto">
             <div class="col-md-5 col-sm-12">
                 <div class="card pt-4">
                     <div class="card-body">
-                        <div class="text-center mb-5">
-                            <img src="assets/images/logo400x80.png" height="48" class='mb-4'>
-                            <h3>Log In to Digital Register</h3>
-                            <p>Government of Karnataka.</p>
+                        <div class="row mb-4">
+                            <div class="col-3">
+                                <img src="assets/images/favicon.png" class="img-thubmnail">
+                            </div>
+                            <div class="col-9">
+                                <h5 class="font-semibold">KARNATAKA STATE<br>POLLUTION CONTROL BOARD</h5>
+                                <p>Government of Karnataka</p>
+                            </div>
                         </div>
+                        <h3 class="mb-3 font-weight-bold text-dark">Login to Digital Register</h3>
                         <form action="index.html">
-                            <div class="form-group position-relative has-icon-left">
-                                <label for="Email">Email</label>
+                            <div class="form-group position-relative has-icon-left  mb-3">
+                                <label for="Email">User-id</label>
                                 <div class="position-relative">
-                                    <input type="email" class="form-control round" id="username" placeholder="Username">
+                                    <input type="email" class="form-control round" placeholder="You're email">
                                     <div class="form-control-icon">
                                         <i data-feather="mail"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group position-relative has-icon-left">
+                            <div class="form-group position-relative has-icon-left  mb-3">
                                 <div class="clearfix">
                                     <label for="password">Password</label>
                                 </div>
                                 <div class="position-relative">
-                                    <input type="password" class="form-control round" id="password" placeholder="Password">
+                                    <input type="password" class="form-control round" id="password" placeholder="You're password">
                                     <div class="form-control-icon">
-                                        <i data-feather="lock"></i>
+                                        <i data-feather="key"></i>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class='form-check clearfix my-4'>
+                            <div class='form-check clearfix my-4 mb-3'>
                                 <div class="checkbox float-left">
                                     <input type="checkbox" id="checkbox1" class='form-check-input' >
                                     <label for="checkbox1">Remember me</label>
