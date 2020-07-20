@@ -913,6 +913,9 @@ footer {
   .img-login {
     display: none;
   }
+  .plus {
+    width: 24px;
+  }
   .sidebar-wrapper {
     left: -270px;
   }
