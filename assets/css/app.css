@@ -109,12 +109,19 @@
   font-family: "Segoe UI", sans-serif, arial;
 }
 
+.login_logo {
+  position: relative;
+}
 .plus {
   background-image: url(assets/images/plus.svg);
 }
 
 #app {
   position: relative;
+}
+
+.img-login {
+  position: fixed;
 }
 
 #main {
